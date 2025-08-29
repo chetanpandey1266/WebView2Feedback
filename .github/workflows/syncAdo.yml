@@ -1,6 +1,12 @@
 name: Sync ADO Issue
 
 on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to sync'
+        required: true
+        default: '1'
   issues:
     types: [labeled, closed, reopened]
 
