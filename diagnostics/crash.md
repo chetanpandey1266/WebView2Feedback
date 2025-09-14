@@ -12,3 +12,13 @@ By default the user data folder is created in the app's folder by default with a
 If you do not have crash dumps - please navigate your webview2 control to `edge://crashes` to see if there are new reports. Copy necessary data to Clipboard and share with us.
 
 ![crashes](resources/crashes.png)
+
+If you don't see related failures in `edge://crashes`, use EventViewer to look at the crashes.
+
+Open Event Viewer by typing eventvwr in the search box on the taskbar and selecting the app.
+
+- In the left pane, expand Windows Logs and click on Application.
+- In the right pane, click on `Filter Current Log`.
+- In the Filter tab, under Event sources, select `Windows Error Reporting` and click on OK.
+- You will see a list of events related to Windows Error Reporting – search for the ones with msedgewebview2.exe process or with your app process. Try to use `Date and Time` column to better search for the crash
+- Copy necessary data to Clipboard and share with us.
